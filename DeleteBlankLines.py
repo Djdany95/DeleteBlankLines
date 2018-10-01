@@ -5,7 +5,7 @@ import sys
 # -----------------------------------------------------
 def delete_blank_lines(raw_file, start):
     """
-    Opens the file, checks than file has more lines than start,
+    Opens the file, checks that file has more lines than start,
     go through the file deleting the blank lines and return it.
     """
     with open(raw_file, 'r', encoding='utf-8') as file:
@@ -27,7 +27,7 @@ def delete_blank_lines(raw_file, start):
 
 # -----------------------------------------------------
 def clipboard(to_clipboard):
-    """Simply copy the string apssed to clipboard"""
+    """Simply copy the string passed to clipboard"""
     pyperclip.copy(to_clipboard)
 
 
@@ -37,7 +37,7 @@ def main():
     try:
         raw_file = sys.argv[1]
     except:
-        print('You need to pass a file for the first argument.')
+        print('You need to pass a file in the first argument.')
     else:
         try:
             start = int(sys.argv[2])
@@ -47,7 +47,7 @@ def main():
             try:
                 clean_file = delete_blank_lines(raw_file, start)
             except:
-                print('The file is shorter than start.')
+                print('The file is shorter than start line passed.')
             else:
                 clipboard(clean_file)
                 print('Succesfully copied to clipboard.')

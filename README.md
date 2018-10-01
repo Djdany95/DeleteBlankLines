@@ -8,5 +8,4 @@ This will delete all blank lines in someText.css from line 300 to end and copy t
 
 ### TODOs
 
-- [ ] Test in Linux
-- [ ] MacOS compatibility
+- [ ] Test in Linux and MacOS
